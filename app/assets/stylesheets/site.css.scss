@@ -1,0 +1,94 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#nav{
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.logo_word {
+  font-size: 1.3em;
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  h1{
+    margin: 0;
+    padding: 0;
+  }
+  p{
+    color: #666;
+    font-size: 12px;
+    margin-top: 14px;
+  }
+}
+
+.tel {
+  position: absolute;
+  right: 180px;
+  top: 25px;
+}
+
+.c {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: #666;
+}
+
+.top {
+  height: 38px;
+  background: transparent url(/assets/bg_menu.jpg) repeat-x 0 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.site.index #home, .products #product, .posts #news, .site.contact #contact, .site.about #about {
+  background: transparent url(/assets/ps_bg.jpg);
+}
+
+ .menu ul{
+  margin: 0;
+  padding: 0;
+ }
+
+.menu ul li {
+  width: 146px;
+  height: 40px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li a {
+  line-height: 44px;
+  height: 38px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  padding: 0;
+
+}
+
+p.tips {
+text-indent: 0px;
+font-weight: bold;
+margin-top: 20px;
+font-weight: bold;
+color: red;
+}
+
+dl.contact dt {
+padding-left: 15px;
+float: left;
+margin-right: 10px;
+display: block;
+line-height: 2em;
+width: 100px;
+}
+
+.content dd {
+line-height: 2em;
+}

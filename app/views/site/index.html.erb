@@ -1,0 +1,53 @@
+<% title '张家港天工公司 官方首页' %>
+<% description '张家港天工公司官方网站联系我们, 欢迎各界朋友莅临参观、指导和业务洽谈' %>
+<% keywords  '张家港天工 张家港天工机械 金刚石电镀 精密收线机 表面处理设备 联系我们 公司新闻 公司新品' %>
+
+<div class="three_list">
+  <div class="ui grid">
+    <div class="five wide column">
+      <div class="box">
+        <h2><span class="red">新闻资讯</span><span class="gray">NEWS</span></h2>
+        <ul class="posts-list-home">
+          <% Post.first(4).each_with_index do |post, i| %>
+            <li>
+              <span class="num"><%= i + 1 %></span>
+              <%= link_to post.title.truncate(15), post %> <br>
+              <span class="date"><%= post.created_at.strftime('%Y-%m-%d') %></span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="seven wide column">
+      <div class="box about">
+        <h2><span class="red">公司简介</span><span class="gray">ABOUT US</span></h2>
+        <span class="red">
+          张家港天工机械制造有限公司
+        </span>
+        是专业从事金刚石线设备和各种规格的金刚线线切割设备产品, 以及相关配套设德的生产的企业。生产的电镀线生产设备上砂效果好，速度快，已和国内几家金刚石线生产厂家取得了非常好的效果。最新研发的金刚石电镀上包括了自动穿线、松下在线成像检测系统，以及生产数据在线检测等先进技术，是一家专业对金刚石电镀线生产设备进行智能化生产的企业。
+
+        <div class='d'>
+          <table>
+            <tr>
+              <td><span class="dd red">产品特点</span> </td>
+              <td><span class="dd">智能化 </span></td>
+              <td><span class="dd">生产可靠 </span></td>
+              <td><span class="dd">可定制</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="four wide column">
+      <div class="">
+        <h2><span class="red">公司新品</span><span class="gray">Our Product</span></h2>
+        <%= image_tag 'a.jpg', width: '225px' %>
+       <div class="i">
+         <a href="/contact"><%= image_tag "contact-insite-banner.gif", width: '225px' %></a>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>

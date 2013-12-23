@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= display_meta_tags :site => t('site') %>
+    <link rel="icon" href="/assets/l.ico" type="image/x-icon"/> 
+    <link rel="shortcut icon" href="/assets/l.ico" type="image/x-icon"/> 
+    <%= csrf_meta_tags %>
+  </head>
+  <body class='<%= controller.controller_name %> <%= controller.action_name %>'>
+    <div class="wrap">
+      <div id="nav">
+        <%= t('language') %>:
+        <%# link_to_unless_current t('english'), locale: "en" %>
+        <%= link_to_unless_current t('zh'), locale: "zh" %>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="wrap">
+        <div class="logo">
+          <%= image_tag 'logo.jpg' %>
+        </div>
+        <div class="logo_word">
+          <h1><%= t('site') %></h1>
+          <p><%= t('site_1') %></p>
+        </div>
+
+        <div class="tel">
+          <%= image_tag 'tel.png', :width => "32px" %>
+        </div> 
+
+        <div class="c">
+          phone: 0512 58905516<br> Tel: 15151563966(<%= t('t_4') %>)
+        </div>
+      </div>
+
+      <div class="">
+        <div class="top">
+          <div class="menu wrap">
+            <ul>
+              <li><%= link_to t('home'), root_path, :id => "home"  %></li>
+              <li><%= link_to t('about'), about_url, :id => "about"  %></li>
+              <li><%= link_to t('product'), products_url, :id => "product" %></li>
+              <li><%= link_to t('news'), posts_path, :id => "news"  %></li>
+              <li><%= link_to t('contact'), contact_path, :id => "contact"  %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="wrap">
+      <div id="amazingslider-0" style="display:block;position:relative;margin:16px auto 56px;">
+          <ul class="amazingslider-slides" style="display:none;">
+              <li><%= image_tag '2013.jpg' %></li>
+              <li><%= image_tag 'mobile.jpg' %></li>
+          </ul>
+          <ul class="amazingslider-thumbnails" style="display:none;">
+              <li><%= image_tag '2013.jpg' %></li>
+              <li><%= image_tag 'mobile.jpg' %></li>
+          </ul>
+          <div class="amazingslider-engine" style="display:none;"><a href="http://amazingslider.com">jQuery Image Slider</a></div>
+      </div>
+      <!-- End of body section HTML codes -->
+    </div> -->
+    
+
+
+    <div class="wrap main">
+      <%= yield %>
+    </div>
+
+    <div class="clearfix"></div>
+    
+    <div class="footer">
+      <div class="wrap">
+        <div class="ui grid">
+                    <div class="row">
+                      <div class="six wide column">
+                        <h4>关于天工</h4>
+                        <p>我公司位于全国文明卫生城市，张家港市塘市镇，主营线材电线电缆表面处理设备以及金刚线切割设备,公司竭诚欢迎相关企业人士，成为我们的客户，成为我们的朋友，成为我们的伙伴！欢迎各界朋友莅临参观、指导和业务洽谈。</p>
+                      </div>
+
+                      <div class="five wide column">
+                        <h4>友情链接</h4>
+            <ul>
+              <li><a href="http://www.comtecsolar.com/">卡姆丹克太阳能系统集团有限公司</a></li>
+              <li><a href="http://www.jsjunma.com/">江苏骏马集团</a></li>
+              <li><a href="http://www.cxtools.com.cn/">深圳市常兴金刚石磨具有限公司</a></li>
+            </ul>
+              </div>
+
+              <div class="five wide column">
+                <h4>联系我们</h4>
+                <p>
+                  联系人: 唐晓伟 先生 （总经理办公室 经理） <br>
+                  电 话:86 0512 58905516 <br>
+                  移动电话： 18662230008 <br>
+                  传   真：86 0512 58905516 <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<div class="ui grid">
+  <%= render 'site/share' %>
+
+  <div class="eleven wide column">
+    <div class="box">
+      <ul class='posts-lists'>
+        <% @posts.each do |post| %>
+          <li>
+            <span class="date gray"><%= post.created_at.strftime('%Y-%m-%d') %></span>
+            <%= link_to post.title, post %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
