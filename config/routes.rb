@@ -8,6 +8,7 @@ Trade2::Application.routes.draw do
   # You can have the root of your site routed with "root"
 
   scope ':locale', locale: /#{I18n.available_locales.join("|")}/ do
+    
     resources :products
     resources :posts
     root to: 'site#index'

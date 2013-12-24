@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require sliderengine/amazingslider
 //= require sliderengine/initslider-1
+//= require ckeditor/init
 // require_tree .

@@ -2,16 +2,20 @@
 
 <div class="products">
   <div class="ui four items">
-    <div class="item">
-      <div class="image">
-        <a href="/products/1"><img alt="Thumb img 3138" src="/uploads/product/logo/1/thumb_IMG_3138.JPG"></a>
-      </div>
+    <% @products.each do |product| %>
+      <div class="item" style='min-height: 275px;'>
+        <div class="image">
+          <%= link_to product do  %>
+            <%= image_tag product.logo.thumb.url %>
+          <% end %>
+        </div>
 
-      <div class="content">
+        <div class="content">
 
-        <div class="name"><a href="/products/1">电镀金刚线设备</a></div>
-        <div class="">Price: (面议)</div>
+          <div class="name"><%= link_to product.name, product %></div>
+          <div class="">Price: (面议)</div>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
