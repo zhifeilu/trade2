@@ -92,3 +92,18 @@ width: 100px;
 .content dd {
 line-height: 2em;
 }
+
+.flash {
+position: relative;
+background: transparent url(bg.jpg) no-repeat;
+height: 406px;
+}
+div.caption p {
+background-color: rgba(0, 0, 0, 0.3);
+display: inline-block;
+margin: 2px 0 0 0;
+line-height: 48px;
+padding: 0 13px 0 13px;
+font-size: 26px;
+color: #FFF;
+}
